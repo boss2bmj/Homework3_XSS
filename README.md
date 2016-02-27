@@ -88,17 +88,51 @@ to
 #Cross-site scripting (XSS)
 Try rendering content as HTML instead of plain text by using this ```raw```,```<%== %>```, ```sanitize```, or ```.html_safe ```
 
-![ddd](/app/assets/images/img1.png)
+To Check Which render function is the safest i put this
+
+```javascript
+<script>
+alert("hahahah");
+</script>
+```
+into the content box when i create the new content
+
+![pic0](app/assets/images/img0.png)
+
+First, when i add ```raw``` as in the pic:
+![pic1](app/assets/images/img1.png)
+
+Then it will show like this the pop up message pop with the ```"hahaha"```
+
+![pic2](app/assets/images/img2.png)
 
 
 
-![ddd](/images/img1.png)
+Second, when i add ```<%== %>``` as in the pic:
+![pic3](app/assets/images/img3.png)
+
+Then it shows this the pop up message pop with the ```"hahaha"```
+
+![pic4](app/assets/images/img4.png)
 
 
-Use ```raw```
 
-Use ```<%== %>```
+Third, when i add ```sanitize``` as in the pic:
+![pic3](app/assets/images/img5.png)
 
-Use ```sanitize```
+After that it will not pop up anything, it will remove any unwanted  data for example here ``` <script></script>``` out and normalize it to the correct form as in the pic:
 
-Use ```.html_safe ```
+![pic4](app/assets/images/img6.png)
+
+
+Last, when i add ```.html_safe ``` as in the pic:
+![pic3](app/assets/images/img3.png)
+
+Then it will show this the pop up message pop with the ```"hahaha"```
+
+![pic4](app/assets/images/img4.png)
+
+
+##Answer the Question
+
+So to answer the question that Which render function is the safest?, i will answer that using ```sanitize``` is the safest because it will remove any unwanted  data out and normalize it to the correct form.
