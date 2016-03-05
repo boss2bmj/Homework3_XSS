@@ -31,6 +31,12 @@ $ rake db:migrate
 
 >If you finish until this step, you will get project with model and user.
 
+Then Start server:
+
+```ruby
+$ rails s
+```
+
 ###User Authenticate
 
 go to **app/controllers/application_controller.rb** then add this:
